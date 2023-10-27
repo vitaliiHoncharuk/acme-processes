@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './common/AuthContext';
+import { NotificationProvider } from './components/Notification/NotificationContext';
+import Notification from './components/Notification/Notification';
+import RoutesConfig from './config/routesConfig';
+import theme from './config/theme';
+import { ThemeProvider } from '@mui/material/styles';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NotificationProvider>
+      <ThemeProvider theme={theme}>
+        <AuthProvider>
+          <BrowserRouter>
+            <RoutesConfig />
+          </BrowserRouter>
+          <Notification />
+        </AuthProvider>
+      </ThemeProvider>
+    </NotificationProvider>
   );
-}
+};
 
 export default App;

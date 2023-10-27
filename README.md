@@ -19,35 +19,52 @@ Acme Processes Mapper is a web application built for Acme Corporation to map out
 ## Installation
 
 1. Clone the repository to your local machine.
+
 ```bash
 git clone https://github.com/your-username/acme-processes.git
 ```
+
 2. Navigate to the project directory.
+
 ```bash
 cd acme-processes
 ```
+
 3. Navigate to the project directory.
+
 ```bash
 npm install
 ```
+
 ## Usage
 
- Start the development server.
+Start the development server.
+
 ```bash
    npm start
 ```
 
 ## Testing
+
 For coverage report, run:
-   ```bash
-   npm run test:coverage
-   ```
+
+```bash
+npm run test:coverage
+```
 
 ## Formatting and Linting
+
 To lint the code, run:
-   ```bash
-   npx eslint . --ext .ts,.tsx
-   ```
+
+```bash
+npx eslint . --ext .ts,.tsx
+```
+
+or
+
+```bash
+npm run format
+```
 
 ## Future Plans
 

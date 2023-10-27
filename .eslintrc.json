@@ -23,13 +23,15 @@
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error"
   },
-  "overrides": [{
-    "files": ["*.spec.ts", "*.spec.tsx"],
-    "env": {
-      "jest": true
-    },
-    "rules": {
-      "react/display-name": "off"
+  "overrides": [
+    {
+      "files": ["*.spec.ts", "*.spec.tsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {
+        "react/display-name": "off"
+      }
     }
-  }]
+  ]
 }

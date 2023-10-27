@@ -1,7 +1,7 @@
-![CleanShot 2023-10-27 at 17 01 23](https://github.com/vitaliiHoncharuk/acme-processes/assets/24368083/f25b724d-47fe-4b9e-af44-3f2035836bfa)# Acme Processes Mapper
+![CleanShot 2023-10-27 at 17 01 23](https://github.com/vitaliiHoncharuk/acme-processes/assets/24368083/f25b724d-47fe-4b9e-af44-3f2035836bfa)
+# Acme Processes Mapper
 
 Acme Processes Mapper is a web application built for Acme Corporation to map out the various processes involved in the production of its goods. The app allows users to create a graph of activities where each activity, represented by a node, can be connected to one another, facilitating a visual representation of the production processes.
-![CleanShot 2023-10-27 at 17 01 23](https://github.com/vitaliiHoncharuk/acme-processes/assets/24368083/aeb9f54c-7494-4cac-97cd-309e17ca39fa)
 
 ## Features
 

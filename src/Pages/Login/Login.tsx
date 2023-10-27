@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Paper, Grid, Typography } from '@mui/material';
-import { useAuth } from '../../common/AuthContext';
+import { useAuth } from '../../common/auth/AuthContext';
 import { useNotification } from '../../components/Notification/NotificationContext';
 
 const Login: React.FC = () => {

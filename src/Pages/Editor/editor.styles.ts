@@ -11,6 +11,9 @@ export const EditorWrapper = styled('div')`
 export const MenuContainer = styled(Grid)`
   background-color: #20232a;
   border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const CanvasContainer = styled(Grid)`

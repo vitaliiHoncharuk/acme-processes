@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider } from './common/AuthContext';
+import { AuthProvider } from './common/auth/AuthContext';
 import { NotificationProvider } from './components/Notification/NotificationContext';
 import Notification from './components/Notification/Notification';
 import RoutesConfig from './config/routesConfig';

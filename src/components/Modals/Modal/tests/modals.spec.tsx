@@ -6,8 +6,8 @@ import {
   renderHook,
   act,
 } from '@testing-library/react';
-import Modal from '../Modal/Modal';
-import useModal from '../Modal/useModal';
+import Modal from '../Modal';
+import useModal from '../useModal';
 
 describe('Modal', () => {
   const onCloseMock = jest.fn();

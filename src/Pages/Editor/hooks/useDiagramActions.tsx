@@ -19,6 +19,8 @@ interface useDiagramActionsReturn {
   clearNodes: () => void;
   deleteSelectedNodes: () => void;
   cloneSelected: () => void;
+  lockModel: () => void;
+  unlockModel: () => void;
 }
 
 export const useDiagramActions = (
@@ -184,6 +186,20 @@ export const useDiagramActions = (
     triggerNotification('cloneItem');
   };
 
+  const lockModel = () => {
+    model.setLocked(true);
+    engine.setModel(model);
+    setLocalStorageDiagramModel(model.serialize());
+    triggerNotification('lockModel');
+  };
+
+  const unlockModel = () => {
+    model.setLocked(false);
+    engine.setModel(model);
+    setLocalStorageDiagramModel(model.serialize());
+    triggerNotification('unlockModel');
+  };
+
   return {
     createNode,
     linkNodes,
@@ -191,5 +207,7 @@ export const useDiagramActions = (
     clearNodes,
     deleteSelectedNodes,
     cloneSelected,
+    lockModel,
+    unlockModel,
   };
 };

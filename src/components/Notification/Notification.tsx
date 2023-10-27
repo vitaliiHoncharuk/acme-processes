@@ -29,6 +29,7 @@ const Notification: React.FC = () => {
       open={isSnackbarOpen}
       autoHideDuration={3000}
       onClose={handleSnackbarClose}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
     >
       <div>
         {notification && (

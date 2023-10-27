@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Acme Processes Mapper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Acme Processes Mapper is a web application built for Acme Corporation to map out the various processes involved in the production of its goods. The app allows users to create a graph of activities where each activity, represented by a node, can be connected to one another, facilitating a visual representation of the production processes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Activity Graph**: Create, view, and manage a graphical representation of activities and their connections.
+- **Authentication**: Access to the graph feature is restricted to authenticated users with the credentials `admin / admin`.
+- **Persistent Data**: Diagrams persist across browser refreshes using local storage.
+- **Notification System**: Get feedback on actions within the app via a notification system.
+- **Additional Functionalities**: Besides adding nodes, users can delete nodes, clear the board, lock/unlock the model, and zoom in/out on the diagram for better visualization.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React.js (v18.2.0)
+- TypeScript (v4.9.5)
+- ProjectStorm's React Diagrams Library
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository to your local machine.
+```bash
+git clone https://github.com/your-username/acme-processes.git
+```
+2. Navigate to the project directory.
+```bash
+cd acme-processes
+```
+3. Navigate to the project directory.
+```bash
+npm install
+```
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Start the development server.
+```bash
+   npm start
+```
 
-### `npm run build`
+## Testing
+For coverage report, run:
+   ```bash
+   npm run test:coverage
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Formatting and Linting
+To lint the code, run:
+   ```bash
+   npx eslint . --ext .ts,.tsx
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Plans
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With more time, there are several enhancements and features that could be added to improve the project further:
 
-### `npm run eject`
+- **Test Coverage**: Improve test coverage and initiate the use of Cypress for more robust testing.
+- **State Management**: Migrate state management from context to Redux for better scalability and easier debugging.
+- **Error Handling**: Develop a comprehensive error handling system to provide better user feedback and ensure the stability of the application.
+- **Labels on Activities**: Implement the ability to add labels to activities on the graph for better description and understanding.
+- **Activity Name Editing**: Add the ability to change the names of activities directly within the graph.
+- **Activity Removal**: Introduce an icon to remove activities directly from the graph.
+- **Undo-Redo Functionality**: Implement undo-redo functionality to allow users to easily correct mistakes and revert to previous states of the graph.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+These improvements aim to make the application more robust, user-friendly, and easier to maintain and debug.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+For further inquiries or assistance, please contact: [vitaliihoncharuk@gmail.com](mailto:vitaliihoncharuk@gmail.com)

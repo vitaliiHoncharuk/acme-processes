@@ -19,13 +19,20 @@ import ActionsSpeedDial, {
 } from '../../components/ActionsSpeedDial/ActionsSpeedDial';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ClearAllIcon from '@mui/icons-material/ClearAll';
+import { useAuth } from '../../common/auth/AuthContext';
 
 const Editor: React.FC = () => {
+  const { logout } = useAuth();
   const { isModalOpen, handleOpen, handleClose } = useModal();
   const { engine, model } = useDiagram();
-  const { addNode, clearNodes, deleteSelectedNodes, cloneSelected } =
-    useDiagramActions(engine, model);
+  const {
+    addNode,
+    clearNodes,
+    deleteSelectedNodes,
+    cloneSelected,
+    lockModel,
+    unlockModel,
+  } = useDiagramActions(engine, model);
 
   const handleAddActivity = (
     activityName: string,
@@ -43,22 +50,23 @@ const Editor: React.FC = () => {
         name: 'Delete Selected',
         onClick: deleteSelectedNodes,
       },
-      { icon: <ClearAllIcon />, name: 'Clear Board', onClick: clearNodes },
     ],
-    [clearNodes, deleteSelectedNodes, handleOpen],
+    [deleteSelectedNodes, handleOpen],
   );
 
   return (
     <EditorWrapper>
       <Grid container spacing={0} direction="row">
         <MenuContainer item sm={3} padding="10px">
-          <StyledButton label="Add Activity" handleClick={handleOpen} />
           <StyledButton label="Clear Board" handleClick={clearNodes} />
-          <StyledButton
-            label="Delete selected"
-            handleClick={deleteSelectedNodes}
-          />
           <StyledButton label="Clone selected" handleClick={cloneSelected} />
+          <StyledButton label="Lock Model" handleClick={lockModel} />
+          <StyledButton label="Unlock Model" handleClick={unlockModel} />
+          <StyledButton
+            label="Log Out"
+            handleClick={logout}
+            sx={{ marginTop: 'auto' }}
+          />
           <AddActivityModal
             isModalOpen={isModalOpen}
             handleClose={handleClose}
